@@ -1,0 +1,8 @@
+.website-title {
+  text-decoration: none;
+  color: #777777;
+  &:hover {
+    text-decoration: none!important;
+  }
+  display: flex;
+}

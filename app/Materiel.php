@@ -9,13 +9,13 @@ class Materiel extends Model
     /** @var string $table */
     protected $table='materiels';
     /** @var array $fillable */
-    protected $fillable = ['nom', 'description','fiche', 'liens','categorie_id'];
+    protected $fillable = ['nom', 'description','fiche', 'liens', 'magasin','categorie_id'];
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function Categorie(){
-        return $this->hasOne('App/Categorie');
+    public function categorie(){
+        return $this->belongsTo(Categorie::class);
     }
 
     /**

@@ -34,6 +34,7 @@ class MaterielController extends Controller
             'description' => $request->input('description'),
             'fiche' => $request->input('fiche'),
             'liens' => $request->input('liens'),
+            'magasin' => $request->input('magasin'),
             'categorie_id' => $request->input('categorie')
         ]);
         $materiel->save();
@@ -74,6 +75,8 @@ class MaterielController extends Controller
         $materiel->description = $request->input('description');
         $materiel->fiche = $request->input('fiche');
         $materiel->liens = $request->input('liens');
+        $materiel->magasin = $request->input('magasin');
+
 
         $materiel->save();
 
@@ -101,10 +104,7 @@ class MaterielController extends Controller
             return view('admin.single', ['materiel' => $materiels], compact('categories'));
         }
 
-        return view('single', [
-            'materiel' => $materiels,
-            'categories' => $categories
-        ]);
+        return view('single', ['materiel' => $materiels, 'categories' => $categories]);
     }
 
 }

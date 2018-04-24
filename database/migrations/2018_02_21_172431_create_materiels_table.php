@@ -20,6 +20,7 @@ class CreateMaterielsTable extends Migration
             $table->text('description');
             $table->text('fiche');
             $table->text('liens')->nullable();
+            $table->text('magasin');
             $table->integer('categorie_id')->unsigned();
             $table->foreign('categorie_id')->references('id')->on('categories');
             $table->timestamps();

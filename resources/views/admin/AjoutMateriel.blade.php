@@ -11,14 +11,13 @@
                         <label for="nom" class="col-md-6">nom : </label><br><br>
                         <div class="col-md-6"><input type="text" name="nom" placeholder='"nom"'/></div>
                         <br><br>
-                        <label for="description" class="col-md-6">description : </label></br></br>
-                        <textarea name="description" id="description" rows="4" cols="50"
-                                  placeholder="description"></textarea><br>
-                       <label for="fiche" class="col-md-6">fiche : </label></br></br>
-                        <textarea name="fiche" id="fiche" rows="4" cols="50" placeholder="fiche"></textarea>
-                        <br><br>
-                        <label for="image">Image : </label><br>
-                        <input type="file" name="img[]" multiple><br>
+                        <label for="description" class="col-md-6">description : </label><br><br>
+                        <textarea name="description" id="description"></textarea><br>
+                       <label for="fiche" class="col-md-6">fiche : </label><br><br>
+                        <textarea name="fiche" id="fiche"></textarea>
+                        <br>
+                        <label for="image" class="col-md-6">Image : </label><br><br>
+                        <input type="file" name="img[]" class="col-md-6"><br><br>
                         <label for="categorie" class="col-md-6">Categorie :</label><br><br>
                         <select name="categorie" id="categorie" class="form-control-static">
                             @foreach($categories as $categorie)
@@ -29,6 +28,10 @@
                         <br>
                         <label for="liens" class="col-md-6">Liens :</label><br><br>
                         <div class="col-md-6"><input type="text" name="liens" placeholder='"liens"' value=""/></div>
+                        <br><br>
+                        <label for="col-md-6">Magasins :</label><br>
+                        <textarea name="magasin" id="" cols="30" rows="10"></textarea>
+
                         <br><br>
                         <input type="submit" value="valider"/>
                     </div>

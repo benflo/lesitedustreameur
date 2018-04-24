@@ -24,23 +24,31 @@ class CommentaireController extends Controller
         return redirect()->back();
     }
 
+    public function show(Request $request){
+        $id = $request->id;
+        $commentaire = Commentaires::find($id);
+
+
+            return view('edit', compact('commentaire'));
+
+    }
     public function edit(Request $request)
     {
         $id = $request->id;
         $message = Commentaires::find($id);
 
-        $message->commentaire = $request->input('commentaires');
+        $message->commentaire = $request->input('commentaire');
 
         $message->save();
+        return redirect()->back();
 
-        return redirect()->route('commentaire.edit', ['id' => $id]);
     }
 
     public function delete($id){
         $commentaires = Commentaires::find($id);
         $commentaires->delete();
 
-        return redirect()->route('admin/welcome');
+        return redirect()->back();
     }
 }
 

@@ -16,6 +16,8 @@ Route::get('Materiel/{id}','MaterielController@single')->name('single');
 Route::get('/event','EventController@index')->name('events');
 Route::post('Materiel/{id}','CommentaireController@store')->name('single');
 Route::get('/twitch', 'TwitchController@getTopGames')->name('twitch');
+Route::get('commentaire/{id}','CommentaireController@show')->name('edit');
+Route::post('commentaire/{id}','CommentaireController@edit')->name('edit');
 
 
 
@@ -35,6 +37,10 @@ Route::get('/admin/Materiel/{id}','MaterielController@single')->name('admin.sing
 Route::get('admin/event', 'EventController@index')->name('admin.events');
 Route::post('admin/event', 'EventController@addEvent')->name('events.add');
 Route::post('admin/Materiel/{id}','CommentaireController@store');
+Route::get('admin/commentaire/{id}','CommentaireController@show')->name('commentaire.edit');
+Route::post('admin/commentaire/{id}','CommentaireController@edit')->name('commentaire.edit');
+Route::get('admin/commentaire/delete/{id}','CommentaireController@delete')->name('commentaire.delete');
+
 Auth::routes();
 
 

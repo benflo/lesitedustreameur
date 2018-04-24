@@ -17,9 +17,7 @@
 <body>
 <header>
     <!-- Branding Image -->
-    <a class="website-title" href="{{ url('/admin/welcome') }}">
-        <h1>le site du streameur</h1>
-    </a>
+
     <nav class="navbar navbar-default navbar-static-top">
         <div class="container">
 
@@ -32,7 +30,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-
+                <a class="navbar-brand" href="{{url('/')}}">le site du streameur</a>
 
             </div>
 
@@ -79,7 +77,7 @@
 </main>
 <footer>
     <div class="container">
-        <p>Copyright Benjamin Braas</p>
+        <p class="panel-footer text-center">Copyright &copy; Benjamin Braas</p>
     </div>
 </footer>
 

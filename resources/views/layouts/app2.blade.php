@@ -17,9 +17,6 @@
 <body>
 <header>
     <!-- Branding Image -->
-    <a class="website-title" href="{{ url('/admin/welcome') }}">
-        <h1>le site du streameur</h1>
-    </a>
     <nav class="navbar navbar-default navbar-static-top">
         <div class="container">
 
@@ -33,7 +30,7 @@
                     <span class="icon-bar"></span>
                 </button>
 
-
+                <a class="navbar-brand" href="{{url('/')}}">le site du streameur</a>
             </div>
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
@@ -81,13 +78,20 @@
     @yield('content')
 </main>
 <footer>
-    <div class="container">
-        <p>Copyright Benjamin Braas</p>
+    <div>
+        <p class="panel-footer text-center">Copyright &copy; Benjamin Braas</p>
     </div>
 </footer>
 
 <!-- Scripts -->
 <script src="{{ asset('js/app.js') }}"></script>
+<script src="{{ asset('js/ckeditor/ckeditor.js') }}"></script>
+<script src="{{ asset('js/categorie.js') }}"></script>
+<script> CKEDITOR.replace('commentaire'); </script>
+<script> CKEDITOR.replace('fiche'); </script>
+<script> CKEDITOR.replace('description'); </script>
+<script> CKEDITOR.replace('magasin'); </script>
+
 
 </body>
 </html>

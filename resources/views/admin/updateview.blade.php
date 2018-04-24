@@ -38,6 +38,9 @@
                             <input type="text" name="liens" placeholder='"liens"' value="{{ $materiel->liens }}"/>
                         </div>
                         <br><br>
+                        <label for="col-md-6">Magasins :</label><br>
+                        <textarea name="magasin" id="" cols="30" rows="10">{{ $materiel->magasin }}</textarea>
+                        <br><br>
                         <input type="submit" value="valider"/>
                     </div>
                 </div>
